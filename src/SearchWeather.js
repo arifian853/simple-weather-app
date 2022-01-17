@@ -43,17 +43,21 @@ const SearchWeather = () => {
             <div className="not-found">
                 <br />
                 <br />
+                <br />
+                <br />
+                <br />
                 <div className="prompt">
+                    <h1><b>404</b></h1>
                     <h3>Data Not Found</h3>
-                    <br />
+                    <hr className="hr-black" />
                     <p>Please search the city name with English language only :)</p>
-                    <p>Refresh the page to come back to homepage</p>
+                    <p><b>Refresh</b> the page to come back to homepage</p>
                 </div>
             </div>
         )
     }
 
-    //Temp Converter
+    //Temp Converter 
     let temp = (data.main.temp - 273.15).toFixed(2);
     let temp_min = (data.main.temp_min - 273.15).toFixed(2);
     let temp_max = (data.main.temp_max - 273.15).toFixed(2);
@@ -87,7 +91,7 @@ const SearchWeather = () => {
               <div className="input-group mb-4 w-75 mx-auto">
                 <input
                   type="search"
-                  placeholder="Enter City"
+                  placeholder="Enter City Name"
                   className="form-control"
                   aria-label="Enter City"
                   aria-aria-describedby="basic-addon2"
@@ -116,10 +120,10 @@ const SearchWeather = () => {
                 <br />
                 <h4 className="name-weather">{data.weather[0].main}</h4>
                 <br />
-                <p className="temp-hi-low"> Min {temp_min} &deg;C | Max {temp_max} &deg;C </p>
-                <p className="temp-hi-low">Feels like {feels_like} &deg;</p>
+                <p className="temp-hi-low"> Min <span className="text-primary">{temp_min}</span> &deg;C | Max <span className="text-danger">{temp_max}</span> &deg;C </p>
+                <p className="temp-hi-low">  Feels like <u>{feels_like} &deg;</u></p>
                 <p className="temp-hi-low">Humidity : {data.main.humidity}% | Pressure : {data.main.pressure} mBar</p>
-                <hr className="hr-black" />
+                <hr className="hr-black" /> 
             </div>
           </div>
         </div>
