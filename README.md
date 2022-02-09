@@ -1,5 +1,6 @@
-# simple-weather-app
-A simple weather forecast app made with React JS and API integrating
+# Simple Weather App
+## Made with ReactJS
+A simple weather forecast app made with React JS and API integrating for searching live weather forecast everywhere. 
 
 API used from [OpenWeatherMap.org](https://openweathermap.org/) 
 
